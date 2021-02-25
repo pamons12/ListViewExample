@@ -31,11 +31,14 @@ public class MainActivity extends AppCompatActivity {
         //Set adapter for listView
         listView.setAdapter(adapter);
 
+        //This activates when a item in the listView is clicked
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                //Gets the string of the item clicked on
                 String s = (String) adapterView.getItemAtPosition(position);
 
+                //Make a little popup showing the string of the color clicked on
                 Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
             }
         });
